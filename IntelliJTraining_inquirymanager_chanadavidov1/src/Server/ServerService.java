@@ -83,6 +83,9 @@ public class ServerService {
                     int idToRemove = (Integer) request.getParams();
                     manager.deleteRepresentative(idToRemove);
                     return new ResponseObj(200, "SUCCESS", "Agent removed successfully");
+                case GET_AGENTS_COUNT:
+                    int agentsCount = manager.getAgentsCount();
+                    return new ResponseObj(200, "Total agents in system: " + agentsCount, agentsCount);
                 default:
                     return new ResponseObj(400, "FAILED", "Action not supported");
 
