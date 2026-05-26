@@ -22,7 +22,7 @@ public class InquiryManager {
 
     static {
         try {
-            before();
+            loadInquiriesFromFiles();
         } catch (FileNotFoundException e) {
             throw new RuntimeException("שגיאה בטעינת פניות: " + e.getMessage(), e);
         }
@@ -215,7 +215,7 @@ public class InquiryManager {
         }
     }
 
-    public static void before() throws FileNotFoundException {
+    public static void loadInquiriesFromFiles() throws FileNotFoundException {
         String[] folders = {"Shared.Request", "Shared.Question", "Shared.Complaint"};
         HandleFiles handleFiles = new HandleFiles();
         for (String fn : folders) {
