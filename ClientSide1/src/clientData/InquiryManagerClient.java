@@ -131,12 +131,12 @@ public class InquiryManagerClient {
         return inquiry;
     }
     public void printServerAnswer(ResponseObj respo){
-        if(respo.getStatus()==200)
-            System.out.println("your request over successfully");
-        else
-            System.out.println("your request doesnt over");
-        System.out.println("the server massage is :\n"+respo.getMessage());
-
+        if (respo.getStatus() == 200) {
+            System.out.println(" Success: Your request was processed successfully.");
+        } else {
+            System.out.println(" Error: The request could not be completed.");
+        }
+        System.out.println("Server Message: " + respo.getMessage());
         //in case the client ask all inquiries the respo is list
         if (respo.getResult() instanceof List<?> list) {
             for (Inquiry i :(List<Inquiry>) respo.getResult()) {
