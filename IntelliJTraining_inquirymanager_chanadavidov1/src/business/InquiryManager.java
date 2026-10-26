@@ -426,5 +426,8 @@ public class InquiryManager {
             }
         }
     }
+    public int getAgentsCount() {
+        return QRepresentative.size();
+    }
 }
 

@@ -5,7 +5,7 @@ public class RequestObj  implements Serializable {
 
     public enum Action {
         ADD_INQUIRY, GET_ALL,GET_INQUIRY_STATUS, TEST,GET_COUNT_BY_MONTH,CANCEL_INQUIRY,
-        AGENT_LOGIN, AGENT_LOGOUT, ADD_AGENT, REMOVE_AGENT
+        AGENT_LOGIN, AGENT_LOGOUT, ADD_AGENT, REMOVE_AGENT,GET_AGENTS_COUNT
     }
 
     private Action action;
